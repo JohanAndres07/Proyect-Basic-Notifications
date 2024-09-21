@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --red: hsl(1,90%,64%);
+    --blue: hsl(219,85%, 26%);
+    --white: hsl(0,0%,100%);
+    --very-light-grayish-blue: hsl(210,60%,98%);
+    --light-grayish-blue-1: hsl(211,68%,94%);
+    --light-grayish-blue-2: hsl(205,33%,90%);
+    --Grayish-blue: hsl(219,14%,63%);
+    --Dark-grayish-blue: hsl(219,12%,43%);
+    --very-dark-blue: hsl(224,21%,14%);
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url(/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+.main{
+    padding: 24px 16px;
+
+}
+
+.notifications{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    & .title{
+        color: var(--very-dark-blue);
+        padding-left: 1rem;
+        font-weight:800;
+        font-size: 1.25rem;
+        word-spacing: 9px;
+    }
+    & .number{
+        display: inline-block;
+        color: var(--white);
+        background-color: var(--blue);
+        width: 32px;
+        height: 25px;
+        text-align: center;
+        border-radius: 6px;
+    }
+    & .mark{
+        color: var(--Dark-grayish-blue);
+        font-size: .875rem;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover{
+            color: var(--blue);
+        }
+    }
+}
+
+.post{
+    display: flex;
+    background-color: var(--very-light-grayish-blue);
+    border-radius: 8px;
+    gap: 13px;
+    padding: 16px;
+    min-width: 28.875rem;
+    margin: 0 auto 0.625rem;
+    font-size: .875rem;
+    cursor: pointer;
+    position: relative;
+    color: var(--Dark-grayish-blue);
+    & .image{
+        width: 39px;
+        height: 39px;
+    }
+    & .name{
+        font-weight:bold;
+        color: var(--very-dark-blue);
+        &:hover{
+            color: var(--blue);
+        }
+    }
+    & .reaction{
+        font-weight: bold;
+        &:hover{
+            color: var(--blue);
+        }
+    }
+    & .time{
+        color: var(--Grayish-blue);
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+    & .message{
+        border: 2px solid var(--light-grayish-blue-2);
+        border-radius: 0.3125rem;
+        padding: .875rem;
+        margin-top: .75rem;
+        &:hover{
+            background-color: var(--light-grayish-blue-1);
+        }
+    }
+    & .picture{
+        position: absolute;
+        right: .625rem;
+        width: 2.4375rem;
+        height: 2.4375rem;
+    }
+}
+.not-read{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--red);
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+@media (min-width: 768px){
+    .main{
+        width: 45.625rem;
+        margin: 0 auto ;
+    }
+    .post{
+        font-size: 1rem;
+    }
+}
